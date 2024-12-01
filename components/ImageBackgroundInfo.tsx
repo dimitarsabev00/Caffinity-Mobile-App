@@ -89,7 +89,7 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
               }}
             >
               <GradientBGIcon
-                name="like"
+                name="heart"
                 color={
                   favourite ? COLORS.primaryRedHex : COLORS.primaryLightGreyHex
                 }
