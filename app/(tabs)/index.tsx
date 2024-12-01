@@ -243,13 +243,16 @@ const HomeScreen = () => {
           renderItem={({ item }) => {
             return (
               <TouchableOpacity
-                onPress={() => {
-                  router.replace("/details", {
-                    index: item.index,
+              onPress={() => {
+                router.push({
+                  pathname: "/details",
+                  params: {
+                    index: item.index.toString(), // Convert to string to ensure proper parsing
                     id: item.id,
                     type: item.type,
-                  });
-                }}
+                  },
+                });
+              }}
               >
                 <CoffeeCard
                   id={item.id}
@@ -281,13 +284,16 @@ const HomeScreen = () => {
           renderItem={({ item }) => {
             return (
               <TouchableOpacity
-                onPress={() => {
-                  router.push("/details", {
-                    index: item.index,
+              onPress={() => {
+                router.push({
+                  pathname: "/details",
+                  params: {
+                    index: item.index.toString(), // Convert to string to ensure proper parsing
                     id: item.id,
                     type: item.type,
-                  });
-                }}
+                  },
+                });
+              }}
               >
                 <CoffeeCard
                   id={item.id}
