@@ -8,6 +8,9 @@ const TabsLayout = () => {
       }}
     >
       <Tabs.Screen name="index" />
+      <Tabs.Screen name="cart" />
+      <Tabs.Screen name="favorites" />
+      <Tabs.Screen name="history" />
     </Tabs>
   );
 };
