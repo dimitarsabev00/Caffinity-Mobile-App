@@ -56,7 +56,7 @@ const TabsLayout = () => {
         }}
       />
       <Tabs.Screen
-        name="history"
+        name="orderHistory"
         options={{
           tabBarIcon: ({ focused, color, size }) => (
             <Feather
