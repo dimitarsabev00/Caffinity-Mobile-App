@@ -243,16 +243,16 @@ const HomeScreen = () => {
           renderItem={({ item }) => {
             return (
               <TouchableOpacity
-              onPress={() => {
-                router.push({
-                  pathname: "/details",
-                  params: {
-                    index: item.index.toString(), // Convert to string to ensure proper parsing
-                    id: item.id,
-                    type: item.type,
-                  },
-                });
-              }}
+                onPress={() => {
+                  router.push({
+                    pathname: "/details",
+                    params: {
+                      index: item.index.toString(), // Convert to string to ensure proper parsing
+                      id: item.id,
+                      type: item.type,
+                    },
+                  });
+                }}
               >
                 <CoffeeCard
                   id={item.id}
@@ -279,21 +279,24 @@ const HomeScreen = () => {
           horizontal
           showsHorizontalScrollIndicator={false}
           data={BeanList}
-          contentContainerStyle={[styles.FlatListContainer]}
+          contentContainerStyle={[
+            styles.FlatListContainer,
+            { marginBottom: 100 },
+          ]}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => {
             return (
               <TouchableOpacity
-              onPress={() => {
-                router.push({
-                  pathname: "/details",
-                  params: {
-                    index: item.index.toString(), // Convert to string to ensure proper parsing
-                    id: item.id,
-                    type: item.type,
-                  },
-                });
-              }}
+                onPress={() => {
+                  router.push({
+                    pathname: "/details",
+                    params: {
+                      index: item.index.toString(), // Convert to string to ensure proper parsing
+                      id: item.id,
+                      type: item.type,
+                    },
+                  });
+                }}
               >
                 <CoffeeCard
                   id={item.id}
@@ -320,7 +323,6 @@ const styles = StyleSheet.create({
   ScreenContainer: {
     flex: 1,
     backgroundColor: COLORS.primaryBlackHex,
-    paddingBottom: 100,
   },
   ScrollViewFlex: {
     flexGrow: 1,
